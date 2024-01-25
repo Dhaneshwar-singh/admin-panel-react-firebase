@@ -7,14 +7,14 @@ import { getMessaging } from "firebase/messaging";
 // Initialize Firebase
 const app = initializeApp(
   {
-    apiKey: "AIzaSyABF4m8puuckAImYCAF5HRFsZ_03J609LQ",
-    authDomain: "admin-panel-76a17.firebaseapp.com",
-    databaseURL: "https://admin-panel-76a17-default-rtdb.firebaseio.com",
-    projectId: "admin-panel-76a17",
-    storageBucket: "admin-panel-76a17.appspot.com",
-    messagingSenderId: "215078169100",
-    appId: "1:215078169100:web:61f5a720a5ff127b645c29",
-    measurementId: "G-7CXT51EQ6T"
+    apiKey: "AIzaSyDqMD5hZOqxhM7cY9D7LprDP24T3V2L2MQ",
+    authDomain: "devtasthanam.firebaseapp.com",
+    databaseURL: "https://devtasthanam-default-rtdb.firebaseio.com",
+    projectId: "devtasthanam",
+    storageBucket: "devtasthanam.appspot.com",
+    messagingSenderId: "791803858817",
+    appId: "1:791803858817:web:c0c2610d003923ab2e2280",
+    measurementId: "G-67B3QT3S6G"
   }
 )
 export const auth = getAuth(app)
