@@ -38,6 +38,24 @@ const Login = () => {
   const { dispatchAuth, dispatchAuthRole, role } = useContext(AuthContext)
   const navigate = useNavigate()
 
+
+  const onLogin = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            navigate(`/${role}/dashboard`)
+            console.log(user);
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage)
+        });
+       
+    }
+
   const handleLogin = (e) => {
     e.preventDefault()
     setLoading(true)
@@ -137,7 +155,7 @@ const Login = () => {
                     }}
                   /> : <MDButton
                     // disabled={loginUser.email === '' || loginUser.password === '' ? true : false}
-                    variant="gradient" color="info" fullWidth type="submit" onClick={handleLogin}>
+                    variant="gradient" color="info" fullWidth type="submit" onClick={onLogin}>
                     LOGIN
                   </MDButton>
                 }
